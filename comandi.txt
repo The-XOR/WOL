@@ -1,0 +1,8 @@
+Accensione:
+curl http://<address>/on
+
+Spegnimento:
+curl http://<address>/off
+
+Interattivo:
+http://<address>
