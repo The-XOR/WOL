@@ -4,5 +4,9 @@ curl http://<address>/on
 Spegnimento:
 curl http://<address>/off
 
+Stato:
+curl http://<address>/status 
+ritorna 1=acceso, 0 = spento
+
 Interattivo:
 http://<address>
