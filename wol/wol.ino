@@ -3,7 +3,7 @@
 #include <WebServer.h>
 
 #define SERIAL_PRINT
-#define THEXOR // OCIO! comment out this line if you != me
+//#define THEXOR // OCIO! comment out this line if you != me
 #ifdef THEXOR
 #include "/home/io/Vaults/Segretoni/include/wifi.h"
 #else
@@ -31,9 +31,9 @@ void sendStatus()
 void handleRoot()
 {
   if (digitalRead(inputPin) == LOW)
-    server.send(200, "text/html", "<p>Software version 2</p><h1>DSD status: OFF</h1><p><a href=\"/on\">Turn On</a></p>");
+    server.send(200, "text/html", "<p>Software version 2</p><h1>RTR status: OFF</h1><p><a href=\"/on\">Turn On</a></p>");
   else
-    server.send(200, "text/html", "<p>Software version 2</p><h1>DSD status: ON</h1><p><a href=\"/off\">Turn Off</a></p>");
+    server.send(200, "text/html", "<p>Software version 2</p><h1>RTR status: ON</h1><p><a href=\"/off\">Turn Off</a></p>");
 }
 
 void handleStatus()
